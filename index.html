@@ -23,6 +23,12 @@
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
   }
+
+
+  .music-controls {
+    top: 30px; /* Slightly less on mobile to account for smaller screens */
+  }
+
   
   #surprise {
     font-size: 24px;
@@ -707,17 +713,17 @@
 
     /* 🎵 Music Controls */
     .music-controls {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: rgba(255, 255, 255, 0.7);
-      padding: 5px 10px;
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      z-index: 10;
-    }
+  position: absolute;
+  top: 50px; /* Changed from 10px to 50px to move it down */
+  right: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 5px 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  z-index: 10;
+}
 
     .music-controls button {
       background: none;
@@ -1726,7 +1732,7 @@ document.addEventListener('touchmove', function(e) {
       // Preload images
       const images = [
         'cute.jpg',
-        'dudu.jpeg',
+        'dudu.jpg',
         'dudu1.jpg',
         'dudu2.jpg',
         'dudu3.jpg',
@@ -1740,7 +1746,9 @@ document.addEventListener('touchmove', function(e) {
         'eyes.jpg',
         'smile.jpg',
         'soul.jpg',
-        'sweet.jpg'
+        'sweet.jpg',
+        'song.mp3',
+        
       ];
 
       images.forEach(src => {
