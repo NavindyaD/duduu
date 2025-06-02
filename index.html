@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Happy Birthday, Dudu! 💖</title>
@@ -30,6 +31,7 @@
       border-radius: 5px;
       pointer-events: none;
     }
+
     .heart::before,
     .heart::after {
       content: '';
@@ -39,19 +41,23 @@
       background-color: inherit;
       border-radius: 50%;
     }
+
     .heart::before {
       top: -10px;
       left: 0;
     }
+
     .heart::after {
       left: 10px;
       top: 0;
     }
+
     @keyframes fallHeart {
       0% {
         transform: translateY(-10vh) rotate(-45deg);
         opacity: 1;
       }
+
       100% {
         transform: translateY(110vh) rotate(-45deg);
         opacity: 0;
@@ -70,6 +76,7 @@
       transition: all 0.5s ease;
       z-index: 10;
     }
+
     .photo:hover {
       transform: scale(1.1) rotate(5deg);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
@@ -85,8 +92,9 @@
       text-align: center;
       transition: all 0.8s ease;
       user-select: none;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
     }
+
     @keyframes fadeIn {
       to {
         opacity: 1;
@@ -108,17 +116,20 @@
       cursor: pointer;
       transition: all 0.3s;
       user-select: none;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       position: relative;
       overflow: hidden;
     }
+
     button:active {
       transform: scale(0.95);
     }
+
     button:hover {
       transform: translateY(-3px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     }
+
     button::after {
       content: '';
       position: absolute;
@@ -126,20 +137,23 @@
       left: 50%;
       width: 5px;
       height: 5px;
-      background: rgba(255,255,255,0.5);
+      background: rgba(255, 255, 255, 0.5);
       opacity: 0;
       border-radius: 100%;
       transform: scale(1, 1) translate(-50%);
       transform-origin: 50% 50%;
     }
+
     button:focus:not(:active)::after {
       animation: ripple 1s ease-out;
     }
+
     @keyframes ripple {
       0% {
         transform: scale(0, 0);
         opacity: 0.5;
       }
+
       100% {
         transform: scale(20, 20);
         opacity: 0;
@@ -176,13 +190,15 @@
       display: none;
       animation: popUp 1s ease-out forwards;
       user-select: none;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     }
+
     @keyframes popUp {
       0% {
         transform: scale(0);
         opacity: 0;
       }
+
       100% {
         transform: scale(1);
         opacity: 1;
@@ -198,11 +214,13 @@
       border-radius: 2px;
       user-select: none;
     }
+
     @keyframes fall {
       0% {
         transform: translateY(0) rotate(0deg);
         opacity: 1;
       }
+
       100% {
         transform: translateY(100vh) rotate(360deg);
         opacity: 0;
@@ -219,6 +237,7 @@
       animation: rotateFlower 20s linear infinite;
       user-select: none;
     }
+
     .petal {
       width: 60px;
       height: 60px;
@@ -228,26 +247,32 @@
       transform-origin: bottom center;
       opacity: 0.8;
     }
+
     .petal1 {
       transform: rotate(0deg) translateY(-30px);
       background: #ffb6c1;
     }
+
     .petal2 {
       transform: rotate(72deg) translateY(-30px);
       background: #ff69b4;
     }
+
     .petal3 {
       transform: rotate(144deg) translateY(-30px);
       background: #ff1493;
     }
+
     .petal4 {
       transform: rotate(216deg) translateY(-30px);
       background: #db7093;
     }
+
     .petal5 {
       transform: rotate(288deg) translateY(-30px);
       background: #c71585;
     }
+
     .center {
       position: absolute;
       top: 40px;
@@ -258,10 +283,12 @@
       border-radius: 50%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
+
     @keyframes rotateFlower {
       from {
         transform: rotate(0deg);
       }
+
       to {
         transform: rotate(360deg);
       }
@@ -276,6 +303,7 @@
       height: 80px;
       z-index: 5;
     }
+
     .plate {
       width: 110px;
       height: 20px;
@@ -284,8 +312,9 @@
       position: absolute;
       bottom: 0;
       left: -5px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
+
     .cake-bottom {
       width: 100px;
       height: 40px;
@@ -294,6 +323,7 @@
       position: absolute;
       bottom: 20px;
     }
+
     .cake-top {
       width: 110px;
       height: 30px;
@@ -303,6 +333,7 @@
       bottom: 60px;
       left: -5px;
     }
+
     .candle {
       width: 8px;
       height: 30px;
@@ -312,6 +343,7 @@
       left: 46px;
       border-radius: 4px;
     }
+
     .flame {
       width: 12px;
       height: 20px;
@@ -323,11 +355,15 @@
       animation: flicker 0.5s infinite alternate;
       box-shadow: 0 0 10px #ff4500, 0 0 20px #ff8c00;
     }
+
     @keyframes flicker {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: scale(1);
         opacity: 1;
       }
+
       50% {
         transform: scale(1.1);
         opacity: 0.8;
@@ -343,6 +379,7 @@
       animation: float 8s infinite ease-in-out;
       z-index: 1;
     }
+
     .balloon::before {
       content: '';
       position: absolute;
@@ -352,32 +389,40 @@
       bottom: -50px;
       left: 29px;
     }
+
     @keyframes float {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: translateY(0) rotate(-5deg);
       }
+
       50% {
         transform: translateY(-20px) rotate(5deg);
       }
     }
+
     .balloon1 {
       background: radial-gradient(circle at 30% 30%, #ff4081, #c2185b);
       left: 10%;
       top: 10%;
       animation-delay: 0s;
     }
+
     .balloon2 {
       background: radial-gradient(circle at 30% 30%, #4caf50, #2e7d32);
       right: 15%;
       top: 15%;
       animation-delay: 0.5s;
     }
+
     .balloon3 {
       background: radial-gradient(circle at 30% 30%, #2196f3, #0d47a1);
       left: 20%;
       top: 30%;
       animation-delay: 1s;
     }
+
     .balloon4 {
       background: radial-gradient(circle at 30% 30%, #ffeb3b, #fbc02d);
       right: 25%;
@@ -394,27 +439,31 @@
       background: white;
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
       z-index: 100;
       max-width: 80%;
       text-align: center;
       display: none;
       animation: messagePop 0.5s ease-out;
     }
+
     @keyframes messagePop {
       0% {
         transform: translate(-50%, -50%) scale(0.5);
         opacity: 0;
       }
+
       100% {
         transform: translate(-50%, -50%) scale(1);
         opacity: 1;
       }
     }
+
     .message-box h2 {
       color: #ff4081;
       margin-top: 0;
     }
+
     .message-box button {
       margin-top: 15px;
       background: #ff4081;
@@ -432,11 +481,13 @@
       animation: sparkle 1s ease-out forwards;
       box-shadow: 0 0 5px white;
     }
+
     @keyframes sparkle {
       0% {
         transform: scale(0);
         opacity: 1;
       }
+
       100% {
         transform: scale(1);
         opacity: 0;
@@ -457,6 +508,7 @@
       z-index: 10;
       display: none;
     }
+
     .gift-box::before {
       content: '';
       position: absolute;
@@ -467,6 +519,7 @@
       left: 0;
       border-radius: 5px;
     }
+
     .gift-box::after {
       content: '🎁';
       position: absolute;
@@ -475,13 +528,25 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
+
     .gift-box:hover {
       animation: shake 0.5s infinite;
     }
+
     @keyframes shake {
-      0%, 100% { transform: translateX(-50%) rotate(0deg); }
-      25% { transform: translateX(-50%) rotate(-5deg); }
-      75% { transform: translateX(-50%) rotate(5deg); }
+
+      0%,
+      100% {
+        transform: translateX(-50%) rotate(0deg);
+      }
+
+      25% {
+        transform: translateX(-50%) rotate(-5deg);
+      }
+
+      75% {
+        transform: translateX(-50%) rotate(5deg);
+      }
     }
 
     audio {
@@ -497,7 +562,7 @@
       background: #fff9c4;
       padding: 20px;
       border-radius: 5px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       max-width: 80%;
       display: none;
       z-index: 100;
@@ -505,21 +570,26 @@
       text-align: center;
       border: 2px solid #ffd54f;
     }
+
     @keyframes scrollOpen {
       0% {
         transform: translate(-50%, -50%) scaleY(0);
       }
+
       100% {
         transform: translate(-50%, -50%) scaleY(1);
       }
     }
+
     .scroll-message h3 {
       color: #e91e63;
       margin-top: 0;
     }
+
     .scroll-message p {
       margin-bottom: 0;
     }
+
     .scroll-message button {
       margin-top: 15px;
       background: #ff9800;
@@ -530,7 +600,7 @@
       position: absolute;
       top: 10px;
       right: 10px;
-      background: rgba(255,255,255,0.7);
+      background: rgba(255, 255, 255, 0.7);
       padding: 5px 10px;
       border-radius: 20px;
       display: flex;
@@ -538,6 +608,7 @@
       gap: 5px;
       z-index: 10;
     }
+
     .music-controls button {
       background: none;
       border: none;
@@ -546,17 +617,378 @@
       font-size: 16px;
       color: #e91e63;
     }
+
+    /* 🎠 Carousel */
+    .carousel {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      height: 200px;
+      display: none;
+      z-index: 100;
+      perspective: 1000px;
+    }
+
+    .carousel-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      animation: rotateCarousel 20s infinite linear;
+    }
+
+    .carousel-item {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: white;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      backface-visibility: hidden;
+    }
+
+    .carousel-item img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    @keyframes rotateCarousel {
+      from {
+        transform: rotateY(0deg);
+      }
+
+      to {
+        transform: rotateY(360deg);
+      }
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+
+    /* 🎆 Fireworks */
+    .firework {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px 2px;
+      animation: explode 1s ease-out forwards;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    @keyframes explode {
+      0% {
+        transform: translate(0, 0) scale(0);
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translate(var(--tx), var(--ty)) scale(1);
+        opacity: 0;
+      }
+    }
+
+    /* 💫 Floating Stars */
+    .star {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffeb3b"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>') no-repeat center;
+      background-size: contain;
+      animation: floatStar 10s infinite ease-in-out;
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    @keyframes floatStar {
+
+      0%,
+      100% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+
+      25% {
+        transform: translate(10px, -10px) rotate(10deg);
+      }
+
+      50% {
+        transform: translate(0, -20px) rotate(0deg);
+      }
+
+      75% {
+        transform: translate(-10px, -10px) rotate(-10deg);
+      }
+    }
+
+    /* 🧩 Puzzle Piece */
+    .puzzle-piece {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background: #ff9800;
+      border-radius: 15px;
+      cursor: pointer;
+      display: none;
+      z-index: 50;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s;
+    }
+
+    .puzzle-piece:hover {
+      transform: scale(1.1);
+    }
+
+    /* 🖼️ Photo Collage */
+    .photo-collage {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 200;
+    }
+
+    .collage-inner {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      max-width: 80%;
+      max-height: 80%;
+    }
+
+    .collage-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+      transition: all 0.3s;
+    }
+
+    .collage-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+
+    .close-collage {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    /* 🎨 Memory Game */
+    .memory-game {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      height: 300px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5px;
+      display: none;
+      z-index: 200;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .memory-card {
+      background: #ff4081;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      cursor: pointer;
+      transition: all 0.3s;
+      transform-style: preserve-3d;
+    }
+
+    .memory-card.flipped {
+      transform: rotateY(180deg);
+      background: white;
+    }
+
+    .close-memory {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* 🎤 Karaoke */
+    .karaoke {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      max-width: 500px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      display: none;
+      z-index: 200;
+      text-align: center;
+    }
+
+    .karaoke-lyrics {
+      height: 200px;
+      overflow-y: auto;
+      margin: 20px 0;
+      text-align: left;
+      padding: 10px;
+      border: 1px solid #eee;
+      border-radius: 5px;
+    }
+
+    .karaoke-line {
+      margin: 10px 0;
+      opacity: 0.5;
+      transition: all 0.3s;
+    }
+
+    .karaoke-line.active {
+      color: #ff4081;
+      opacity: 1;
+      font-weight: bold;
+    }
+
+    .close-karaoke {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+
+    .carousel-item-close {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      font-size: 12px;
+      cursor: pointer;
+      z-index: 10;
+      opacity: 0.7;
+      transition: all 0.3s;
+    }
+
+    .carousel-item-close:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      to {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+    }
+
+    .photo-collage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.collage-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 800px; /* Fixed width */
+  height: 700px; /* Fixed height */
+  max-width: 90vw; /* Still responsive to viewport */
+  max-height: 90vh; /* Still responsive to viewport */
+  overflow: auto; /* Adds scroll if content exceeds dimensions */
+}
+
+.collage-img {
+  width: 100%;
+  height: 100%;
+  min-height: 0; /* Allows grid items to shrink */
+  object-fit: cover;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
   </style>
 </head>
+
 <body onclick="startShow()">
 
   <!-- 🎂 Dudu's Photo -->
-  <img
-    class="photo"
-    src="https://i.imgur.com/0y8Ftya.jpg"
-    alt="Dudu's Photo"
-    title="Click anywhere to start the surprise!"
-  />
+  <img class="photo" src="dudu.jpg" alt="Dudu's Photo"
+    title="Click anywhere to start the surprise!" onclick="showPhotoCollage()" />
 
   <!-- 🎉 Birthday Surprise -->
   <div id="surprise">🎉 Happy Birthday Dudu! 🎉</div>
@@ -601,18 +1033,98 @@
   <!-- 🎁 Gift Box -->
   <div class="gift-box" onclick="openGift()"></div>
 
+  <!-- 🎠 Memory Puzzle -->
+  <div class="puzzle-piece" style="top: 20%; left: 10%;" onclick="startMemoryGame()">🧩</div>
+  <div class="puzzle-piece" style="top: 70%; left: 80%;" onclick="startKaraoke()">🎤</div>
+  <div class="puzzle-piece" style="top: 30%; left: 70%;" onclick="showCarousel()">🎠</div>
+  <div class="puzzle-piece" style="top: 80%; left: 20%;" onclick="launchFireworks()">🎆</div>
+
   <!-- 💌 Message Box -->
   <div class="message-box" id="specialMessage">
     <h2>To My Dearest Dudu</h2>
-    <p>On your special day, I want you to know how much you mean to me. You light up my world like nobody else. Wishing you the happiest of birthdays filled with love and joy!</p>
+    <p>On your special day, I want you to know how much you mean to me. You light up my world like nobody else. Wishing
+      you the happiest of birthdays filled with love and joy!</p>
     <button onclick="closeMessage()">Close</button>
   </div>
 
   <!-- 📜 Scroll Message -->
   <div class="scroll-message" id="scrollMessage">
     <h3>A Secret Message Just For You</h3>
-    <p>Every moment with you is special, but today is extra special because it's your birthday! I cherish every laugh, every smile, and every memory we create together.</p>
+    <p>Every moment with you is special, but today is extra special because it's your birthday! I cherish every laugh,
+      every smile, and every memory we create together.</p>
     <button onclick="closeScroll()">💖</button>
+  </div>
+
+  <!-- 🎠 Photo Carousel -->
+  <div class="carousel" id="carousel">
+    <button class="carousel-btn" onclick="closeCarousel()">✕</button>
+    <div class="carousel-inner">
+      <div class="carousel-item" style="transform: rotateY(0deg) translateZ(300px)">
+        <button class="carousel-item-close" onclick="closeCarouselItem(this)">✕</button>
+        <img src="smile.jpg" alt="Dudu 1">
+        <p>Beautiful Smile 😊</p>
+      </div>
+      <div class="carousel-item" style="transform: rotateY(60deg) translateZ(300px)">
+        <button class="carousel-item-close" onclick="closeCarouselItem(this)">✕</button>
+        <img src="eyes.jpg" alt="Dudu 2">
+        <p>Lovely Eyes 😍</p>
+      </div>
+      <!-- and so on for all carousel items -->
+      <div class="carousel-item" style="transform: rotateY(120deg) translateZ(300px)">
+        <button class="carousel-item-close" onclick="closeCarouselItem(this)">✕</button>
+        <img src="cute.jpg" alt="Dudu 3">
+        <p>Cutie Pie 🥧</p>
+      </div>
+      <div class="carousel-item" style="transform: rotateY(180deg) translateZ(300px)">
+        <button class="carousel-item-close" onclick="closeCarouselItem(this)">✕</button>
+        <img src="sweet.jpg" alt="Dudu 4">
+        <button class="carousel-item-close" onclick="closeCarouselItem(this)">✕</button>
+        <p>Sweet Heart 🍬</p>
+      </div>
+      <div class="carousel-item" style="transform: rotateY(240deg) translateZ(300px)">
+        <button class="carousel-item-close" onclick="closeCarouselItem(this)">✕</button>
+        <img src="soul.jpg" alt="Dudu 5">
+        <p>Beautiful Soul ✨</p>
+      </div>
+      <div class="carousel-item" style="transform: rotateY(300deg) translateZ(300px)">
+        <button class="carousel-item-close" onclick="closeCarouselItem(this)">✕</button>
+        <img src="everything.jpg" alt="Dudu 6">
+        <p>My Everything 🌍🥺💝</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🖼️ Photo Collage -->
+  <div class="photo-collage" id="photoCollage">
+    <button class="close-collage" onclick="closePhotoCollage()">✕</button>
+    <div class="collage-inner">
+      <img src="dudu1.jpg" class="collage-img" alt="Dudu 1">
+      <img src="dudu2.jpg" class="collage-img" alt="Dudu 2">
+      <img src="dudu3.jpg" class="collage-img" alt="Dudu 3">
+      <img src="dudu4.jpg" class="collage-img" alt="Dudu 4">
+      <img src="dudu5.jpg" class="collage-img" alt="Dudu 5">
+      <img src="dudu.jpg" class="collage-img" alt="Dudu 6">
+      <img src="dudu.jpg" class="collage-img" alt="Dudu 7">
+      <img src="dudu.jpg" class="collage-img" alt="Dudu 8">
+      <img src="dudu.jpg" class="collage-img" alt="Dudu 9">
+    </div>
+  </div>
+
+  <!-- 🎨 Memory Game -->
+  <div class="memory-game" id="memoryGame">
+    <button class="close-memory" onclick="closeMemoryGame()">✕</button>
+    <!-- Cards will be generated by JavaScript -->
+  </div>
+
+  <!-- 🎤 Karaoke -->
+  <div class="karaoke" id="karaoke">
+    <button class="close-karaoke" onclick="closeKaraoke()">✕</button>
+    <h2>Birthday Karaoke 🎤</h2>
+    <p>Sing along with your favorite birthday song!</p>
+    <div class="karaoke-lyrics" id="karaokeLyrics">
+      <!-- Lyrics will be added by JavaScript -->
+    </div>
+    <button onclick="startKaraokeSing()">Start Singing</button>
   </div>
 
   <!-- 🎵 Music Controls -->
@@ -625,6 +1137,9 @@
   <audio id="music" loop>
     <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
   </audio>
+  <audio id="karaokeMusic">
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg" />
+  </audio>
 
   <script>
     const loveText = document.getElementById('loveText');
@@ -635,9 +1150,34 @@
     const specialMessage = document.getElementById('specialMessage');
     const scrollMessage = document.getElementById('scrollMessage');
     const giftBox = document.querySelector('.gift-box');
+    const carousel = document.getElementById('carousel');
+    const photoCollage = document.getElementById('photoCollage');
+    const memoryGame = document.getElementById('memoryGame');
+    const karaoke = document.getElementById('karaoke');
+    const karaokeLyrics = document.getElementById('karaokeLyrics');
+    const karaokeMusic = document.getElementById('karaokeMusic');
+    const puzzlePieces = document.querySelectorAll('.puzzle-piece');
+
     let heartsInterval = null;
     let alreadyClicked = false;
     let musicPlaying = false;
+    let karaokeInterval = null;
+    let currentLyric = 0;
+
+    const lyrics = [
+      "Happy birthday to you",
+      "Happy birthday to you",
+      "Happy birthday dear Dudu",
+      "Happy birthday to you!",
+      "You're the love of my life",
+      "My shining star so bright",
+      "Wishing you joy and cheer",
+      "All throughout the year!",
+      "May all your dreams come true",
+      "Because you're so special you",
+      "Today we celebrate",
+      "How much you're truly great!"
+    ];
 
     function startShow() {
       if (!alreadyClicked) {
@@ -649,13 +1189,9 @@
         launchConfetti();
         createBalloons();
         showCake();
-        showGiftBox();
+        showPuzzlePieces();
+        createStars();
         alreadyClicked = true;
-        
-        // Show special message after 3 seconds
-        setTimeout(() => {
-          specialMessage.style.display = 'block';
-        }, 3000);
       }
     }
 
@@ -685,111 +1221,101 @@
       }
     }
 
+    function getRandomColorConfetti() {
+      const colors = ['#ff4081', '#4caf50', '#2196f3', '#ffeb3b', '#9c27b0'];
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+
     function createBalloons() {
       const colors = ['#ff4081', '#4caf50', '#2196f3', '#ffeb3b', '#9c27b0'];
-      for (let i = 0; i < 8; i++) {
-        let balloon = document.createElement('div');
-        balloon.classList.add('balloon');
-        balloon.style.left = Math.random() * 90 + '%';
-        balloon.style.top = Math.random() * 30 + '%';
-        balloon.style.background = `radial-gradient(circle at 30% 30%, ${colors[i%colors.length]}, ${darkenColor(colors[i%colors.length])})`;
-        balloon.style.animationDelay = (i * 0.3) + 's';
-        balloon.style.width = (Math.random() * 40 + 50) + 'px';
-        balloon.style.height = (Math.random() * 50 + 60) + 'px';
-        document.body.appendChild(balloon);
+      for (let i = 0; i < 10; i++) {
+        setTimeout(() => {
+          let balloon = document.createElement('div');
+          balloon.classList.add('balloon');
+          balloon.style.left = Math.random() * 100 + 'vw';
+          balloon.style.top = Math.random() * 100 + 'vh';
+          balloon.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+          balloon.style.animationDelay = (Math.random() * 2) + 's';
+          document.body.appendChild(balloon);
+        }, i * 300);
       }
     }
 
-    function darkenColor(color) {
-      // Simple color darkening for balloon gradients
-      return color.replace(/\d+/g, num => Math.floor(num * 0.7));
-    }
-
     function showCake() {
-      document.querySelector('.cake').style.display = 'block';
+      const cake = document.querySelector('.cake');
+      cake.style.display = 'block';
+      cake.style.animation = 'popUp 1s ease-out forwards';
     }
 
     function showGiftBox() {
       setTimeout(() => {
         giftBox.style.display = 'block';
-      }, 5000);
-    }
-
-    function openGift() {
-      giftBox.style.display = 'none';
-      createSparkles(giftBox.getBoundingClientRect().left + 40, giftBox.getBoundingClientRect().top + 30);
-      scrollMessage.style.display = 'block';
-    }
-
-    function createSparkles(x, y) {
-      for (let i = 0; i < 30; i++) {
-        let sparkle = document.createElement('div');
-        sparkle.classList.add('sparkle');
-        sparkle.style.left = x + 'px';
-        sparkle.style.top = y + 'px';
-        sparkle.style.animationDelay = (i * 0.1) + 's';
-        document.body.appendChild(sparkle);
-        setTimeout(() => sparkle.remove(), 1000);
-      }
-    }
-
-    function launchHearts() {
-      heartsInterval = setInterval(() => {
-        const heart = document.createElement('div');
-        heart.classList.add('heart');
-        heart.style.left = Math.random() * 100 + 'vw';
-        heart.style.top = '-10vh';  // Start above the viewport
-        heart.style.backgroundColor = getRandomColorHearts();
-        heart.style.animationDuration = (Math.random() * 5 + 5) + 's'; // 5-10 seconds fall
-        let size = Math.random() * 15 + 10;
-        heart.style.width = size + 'px';
-        heart.style.height = size + 'px';
-        document.body.appendChild(heart);
-        setTimeout(() => heart.remove(), 11000);
       }, 200);
     }
 
-    function stopHearts() {
-      clearInterval(heartsInterval);
+    function showPuzzlePieces() {
+      setTimeout(() => {
+        puzzlePieces.forEach(piece => {
+          piece.style.display = 'block';
+          piece.style.animation = 'popUp 1s ease-out forwards';
+        });
+      }, 1000);
     }
 
-    function getRandomColorConfetti() {
-      const colors = ['#ff4081', '#ffc107', '#03a9f4', '#8bc34a', '#f44336', '#9c27b0', '#00bcd4'];
-      return colors[Math.floor(Math.random() * colors.length)];
-    }
-
-    function getRandomColorHearts() {
-      const colors = ['#ff4081', '#ffc0cb', '#ff69b4', '#ff1493', '#ffb6c1', '#f8bbd0', '#f48fb1'];
-      return colors[Math.floor(Math.random() * colors.length)];
-    }
-
-    function replyYes(event) {
-      event.stopPropagation();
-      loveText.innerHTML = 'Awwww 😍';
-      loveText.style.fontSize = '40px';
-      response.innerHTML =
-        "YAY! I love you too Dudu 💘💘💘<br>You're my forever 💝<br>I hope your birthday is as amazing as you are!";
-      surprise.style.display = 'block';
-      launchHearts();
-      createSparkles(event.clientX, event.clientY);
-    }
-
-    function replyNo(event) {
-      event.stopPropagation();
-      surprise.style.display = 'none';
-      loveText.innerHTML = 'Do you love me? 🥺';
-      loveText.style.fontSize = '80px';
-      response.innerHTML =
-        '<strong>Please say yes... or my heart will break 😢</strong>';
-      stopHearts();
-      
-      // Make the No button run away
-      if (event.target.classList.contains('no')) {
-        const noButton = event.target;
-        noButton.style.position = 'absolute';
-        noButton.style.left = Math.random() * 80 + '%';
-        noButton.style.top = Math.random() * 80 + '%';
+    function createStars() {
+      for (let i = 0; i < 20; i++) {
+        let star = document.createElement('div');
+        star.classList.add('star');
+        star.style.left = Math.random() * 100 + 'vw';
+        star.style.top = Math.random() * 100 + 'vh';
+        star.style.animationDelay = (Math.random() * 5) + 's';
+        document.body.appendChild(star);
       }
+    }
+
+    function replyYes(e) {
+      e.stopPropagation();
+      response.innerHTML = "Yay! I love you too! 💖<br>Let's celebrate your special day!";
+      createHearts();
+      showGiftBox(); // Only show gift box when clicking Yes
+    }
+
+
+    function replyNo(e) {
+      e.stopPropagation();
+      const noMessages = [
+        "Are you sure? 😢",
+        "Maybe click again? 🥺",
+        "Pretty please? 💖",
+        "I'll keep asking! 😘",
+        "Just say yes! 🎉"
+      ];
+      const randomMessage = noMessages[Math.floor(Math.random() * noMessages.length)];
+      response.textContent = randomMessage;
+
+      // Move the no button
+      const noBtn = e.target;
+      const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+      const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+      noBtn.style.position = 'absolute';
+      noBtn.style.left = x + 'px';
+      noBtn.style.top = y + 'px';
+    }
+
+    function createHearts() {
+      if (heartsInterval) clearInterval(heartsInterval);
+
+      heartsInterval = setInterval(() => {
+        let heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 5000);
+      }, 300);
     }
 
     function closeMessage() {
@@ -800,28 +1326,234 @@
       scrollMessage.style.display = 'none';
     }
 
-    // Add sparkle effect when clicking anywhere
-    document.addEventListener('click', function(e) {
-      if (alreadyClicked) {
-        createSparkles(e.clientX, e.clientY);
-      }
-    });
+    function openGift() {
+      giftBox.style.animation = 'popUp 0.5s ease-out reverse forwards';
+      setTimeout(() => {
+        giftBox.style.display = 'none';
+        scrollMessage.style.display = 'block';
+      }, 500);
+    }
 
-    // Add floating balloons on mouse move
-    document.addEventListener('mousemove', function(e) {
-      const balloons = document.querySelectorAll('.balloon');
-      balloons.forEach(balloon => {
-        const rect = balloon.getBoundingClientRect();
-        const x = rect.left + rect.width/2;
-        const y = rect.top + rect.height/2;
-        const distance = Math.sqrt(Math.pow(e.clientX - x, 2) + Math.pow(e.clientY - y, 2));
-        
-        if (distance < 100) {
-          const angle = Math.atan2(e.clientY - y, e.clientX - x);
-          balloon.style.transform = `translate(${Math.cos(angle + Math.PI) * 10}px, ${Math.sin(angle + Math.PI) * 10}px)`;
+    function showSpecialEffect() {
+      for (let i = 0; i < 50; i++) {
+        setTimeout(() => {
+          createSparkle();
+        }, i * 50);
+      }
+    }
+
+    function createSparkle() {
+      let sparkle = document.createElement('div');
+      sparkle.classList.add('sparkle');
+      sparkle.style.left = Math.random() * 100 + 'vw';
+      sparkle.style.top = Math.random() * 100 + 'vh';
+      document.body.appendChild(sparkle);
+      setTimeout(() => sparkle.remove(), 1000);
+    }
+
+    function showCarousel() {
+      carousel.style.display = 'block';
+    }
+
+    function closeCarousel() {
+      carousel.style.display = 'none';
+    }
+
+    function showPhotoCollage() {
+      photoCollage.style.display = 'flex';
+    }
+
+    function closePhotoCollage() {
+      photoCollage.style.display = 'none';
+    }
+
+    function startMemoryGame() {
+      memoryGame.style.display = 'grid';
+      setupMemoryGame();
+    }
+
+    function closeMemoryGame() {
+      memoryGame.style.display = 'none';
+      // Reset game
+      while (memoryGame.children.length > 1) {
+        memoryGame.removeChild(memoryGame.lastChild);
+      }
+    }
+
+    function setupMemoryGame() {
+      const emojis = ['🎂', '🎁', '🎉', '🎈', '💖', '🍰', '🥳', '✨'];
+      const cards = [...emojis, ...emojis]; // Duplicate for pairs
+
+      // Shuffle cards
+      cards.sort(() => Math.random() - 0.5);
+
+      // Create card elements
+      cards.forEach((emoji, index) => {
+        const card = document.createElement('div');
+        card.classList.add('memory-card');
+        card.dataset.emoji = emoji;
+        card.addEventListener('click', flipCard);
+        memoryGame.appendChild(card);
+      });
+    }
+
+    let hasFlippedCard = false;
+    let lockBoard = false;
+    let firstCard, secondCard;
+
+    function flipCard() {
+      if (lockBoard) return;
+      if (this === firstCard) return;
+
+      this.classList.add('flipped');
+      this.textContent = this.dataset.emoji;
+
+      if (!hasFlippedCard) {
+        hasFlippedCard = true;
+        firstCard = this;
+        return;
+      }
+
+      secondCard = this;
+      checkForMatch();
+    }
+
+    function checkForMatch() {
+      let isMatch = firstCard.dataset.emoji === secondCard.dataset.emoji;
+      isMatch ? disableCards() : unflipCards();
+    }
+
+    function disableCards() {
+      firstCard.removeEventListener('click', flipCard);
+      secondCard.removeEventListener('click', flipCard);
+      resetBoard();
+    }
+
+    function unflipCards() {
+      lockBoard = true;
+      setTimeout(() => {
+        firstCard.classList.remove('flipped');
+        secondCard.classList.remove('flipped');
+        firstCard.textContent = '';
+        secondCard.textContent = '';
+        resetBoard();
+      }, 1000);
+    }
+
+    function resetBoard() {
+      [hasFlippedCard, lockBoard] = [false, false];
+      [firstCard, secondCard] = [null, null];
+    }
+
+    function startKaraoke() {
+      karaoke.style.display = 'block';
+      // Add lyrics to the container
+      karaokeLyrics.innerHTML = '';
+      lyrics.forEach((line, index) => {
+        const lyricLine = document.createElement('div');
+        lyricLine.classList.add('karaoke-line');
+        lyricLine.textContent = line;
+        lyricLine.dataset.index = index;
+        karaokeLyrics.appendChild(lyricLine);
+      });
+    }
+
+    function closeKaraoke() {
+      karaoke.style.display = 'none';
+      stopKaraoke();
+    }
+
+    function startKaraokeSing() {
+      stopKaraoke();
+      currentLyric = 0;
+      highlightLyric(currentLyric);
+      karaokeMusic.play();
+
+      karaokeInterval = setInterval(() => {
+        currentLyric++;
+        if (currentLyric >= lyrics.length) {
+          stopKaraoke();
+          return;
         }
+        highlightLyric(currentLyric);
+      }, 3000);
+    }
+
+    function highlightLyric(index) {
+      const lines = document.querySelectorAll('.karaoke-line');
+      lines.forEach(line => line.classList.remove('active'));
+      lines[index].classList.add('active');
+      lines[index].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function stopKaraoke() {
+      if (karaokeInterval) clearInterval(karaokeInterval);
+      karaokeMusic.pause();
+      karaokeMusic.currentTime = 0;
+    }
+
+    function closeCarouselItem(btn) {
+      const carouselItem = btn.parentElement;
+      carouselItem.style.animation = 'fadeOut 0.5s forwards';
+      setTimeout(() => {
+        carouselItem.style.display = 'none';
+      }, 500);
+    }
+
+    // Add this to your existing CSS:
+
+
+    function launchFireworks() {
+      for (let i = 0; i < 20; i++) {
+        setTimeout(() => {
+          createFirework();
+        }, i * 300);
+      }
+    }
+
+    function createFirework() {
+      const x = Math.random() * window.innerWidth;
+      const y = Math.random() * window.innerHeight / 2;
+
+      for (let i = 0; i < 30; i++) {
+        const firework = document.createElement('div');
+        firework.classList.add('firework');
+        firework.style.left = x + 'px';
+        firework.style.top = y + 'px';
+        firework.style.color = getRandomColorConfetti();
+
+        // Random direction
+        const angle = Math.random() * Math.PI * 2;
+        const distance = Math.random() * 100 + 50;
+        firework.style.setProperty('--tx', Math.cos(angle) * distance + 'px');
+        firework.style.setProperty('--ty', Math.sin(angle) * distance + 'px');
+
+        document.body.appendChild(firework);
+        setTimeout(() => firework.remove(), 1000);
+      }
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      // Preload images
+      const images = [
+        'https://i.imgur.com/0y8Ftya.jpg',
+        'https://i.imgur.com/0y8Ftya.jpg',
+        'https://i.imgur.com/0y8Ftya.jpg',
+        'https://i.imgur.com/0y8Ftya.jpg',
+        'https://i.imgur.com/0y8Ftya.jpg',
+        'https://i.imgur.com/0y8Ftya.jpg',
+        'https://i.imgur.com/0y8Ftya.jpg',
+        'https://i.imgur.com/0y8Ftya.jpg',
+        'https://i.imgur.com/0y8Ftya.jpg'
+      ];
+
+      images.forEach(src => {
+        const img = new Image();
+        img.src = src;
       });
     });
   </script>
 </body>
+
 </html>
