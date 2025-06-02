@@ -4,6 +4,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta charset="UTF-8" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💛</text></svg>" type="image/svg+xml">
   <title>Happy Birthday, Dudu! 💖</title>
   <style>
     /* Mobile-specific styles */
@@ -16,10 +17,19 @@
       }
 
       .photo {
-        width: 120px;
-        height: 120px;
-        margin-top: 20px;
-      }
+    width: 150px;
+    height: 150px;
+    margin-top: 30px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  #surprise {
+    font-size: 24px;
+    text-align: center;
+    padding: 0 15px;
+    word-wrap: break-word;
+  }
 
       #loveText {
         font-size: 24px;
@@ -161,22 +171,36 @@
     }
 
     .photo {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid white;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      margin-bottom: 20px;
-      cursor: pointer;
-      transition: all 0.5s ease;
-      z-index: 10;
-    }
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  transition: all 0.5s ease;
+  z-index: 10;
+  -webkit-tap-highlight-color: transparent;
+}
 
-    .photo:hover {
-      transform: scale(1.1) rotate(5deg);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    }
+.photo:active {
+  transform: scale(0.95);
+}
+
+#surprise {
+  position: absolute;
+  top: 20px;
+  color: #ff4081;
+  font-weight: bold;
+  display: none;
+  animation: popUp 1s ease-out forwards;
+  user-select: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
 
     #loveText {
       color: #ff4081;
@@ -277,17 +301,7 @@
       line-height: 1.6;
     }
 
-    #surprise {
-      position: absolute;
-      top: 20px;
-      font-size: 32px;
-      color: #ff4081;
-      font-weight: bold;
-      display: none;
-      animation: popUp 1s ease-out forwards;
-      user-select: none;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    }
+ 
 
     @keyframes popUp {
       0% {
@@ -1004,8 +1018,8 @@
       color: white;
       border: none;
       border-radius: 50%;
-      width: 30px;
-      height: 30px;
+      width: 20%;
+      height: 20%;
       font-size: 16px;
       cursor: pointer;
     }
@@ -1062,9 +1076,9 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
-      width: 700px;
+      width: 200%;
       /* Fixed width */
-      height: 900px;
+      height: 50%;
       /* Fixed height */
       max-width: 90vw;
       /* Still responsive to viewport */
@@ -1711,13 +1725,20 @@ document.addEventListener('touchmove', function(e) {
       const images = [
         'cute.jpg',
         'dudu.jpeg',
-        'https://i.imgur.com/0y8Ftya.jpg',
-        'https://i.imgur.com/0y8Ftya.jpg',
-        'https://i.imgur.com/0y8Ftya.jpg',
-        'https://i.imgur.com/0y8Ftya.jpg',
-        'https://i.imgur.com/0y8Ftya.jpg',
-        'https://i.imgur.com/0y8Ftya.jpg',
-        'https://i.imgur.com/0y8Ftya.jpg'
+        'dudu1.jpg',
+        'dudu2.jpg',
+        'dudu3.jpg',
+        'dudu4.jpg',
+        'dudu5.jpg',
+        'dudu6.jpeg',
+        'dudu7.jpg',
+        'dudu8.jpeg',
+        'dudu9.jpg',
+        'everything.jpg',
+        'eyes.jpg',
+        'smile.jpg',
+        'soul.jpg',
+        'sweet.jpg'
       ];
 
       images.forEach(src => {
