@@ -2,22 +2,118 @@
 <html lang="en">
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta charset="UTF-8" />
   <title>Happy Birthday, Dudu! 💖</title>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
-      font-family: 'Segoe UI', sans-serif;
-      height: 100vh;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: relative;
+    /* Mobile-specific styles */
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+        overflow: auto;
+        height: auto;
+        min-height: 100vh;
+      }
+
+      .photo {
+        width: 120px;
+        height: 120px;
+        margin-top: 20px;
+      }
+
+      #loveText {
+        font-size: 24px;
+        margin: 15px 0;
+      }
+
+      .buttons {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      button {
+      padding: 10px 20px;
+  font-size: 16px;
+  width: 40%;
+  margin: 0 auto;
+  display: block;
+      }
+
+      #response {
+        font-size: 18px;
+        margin-top: 15px;
+      }
+
+      .flower,
+      .cake {
+        transform: scale(0.7);
+      }
+
+      .balloon {
+        transform: scale(0.8);
+      }
+
+      .puzzle-piece {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+      }
+
+      /* Adjust popup sizes */
+      .message-box,
+      .scroll-message,
+      .karaoke {
+        width: 90%;
+        max-width: none;
+        padding: 15px;
+      }
+
+      .carousel {
+        width: 280px;
+        height: 180px;
+      }
+
+      .collage-inner {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90vw;
+        height: auto;
+        max-height: 70vh;
+      }
+
+      /* Memory game adjustments */
+      .memory-game {
+        width: 90vw;
+        height: 90vw;
+        max-width: 300px;
+        max-height: 300px;
+      }
+
+      /* Hide some decorative elements on small screens */
+      .star,
+      .sparkle {
+        display: none;
+      }
     }
+
+    /* Additional touch-friendly styles */
+    button,
+    .puzzle-piece,
+    .gift-box,
+    .photo {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Prevent text selection on mobile */
+    body {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    background: linear-gradient(to right, yellow 0%, orange 100%, red 90%);
+
+      user-select: none;
+    }
+
 
     /* Falling Hearts */
     .heart {
@@ -950,45 +1046,51 @@
     }
 
     .photo-collage {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 200;
-}
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 200;
+    }
 
-.collage-inner {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  width: 800px; /* Fixed width */
-  height: 700px; /* Fixed height */
-  max-width: 90vw; /* Still responsive to viewport */
-  max-height: 90vh; /* Still responsive to viewport */
-  overflow: auto; /* Adds scroll if content exceeds dimensions */
-}
+    .collage-inner {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      width: 700px;
+      /* Fixed width */
+      height: 900px;
+      /* Fixed height */
+      max-width: 90vw;
+      /* Still responsive to viewport */
+      max-height: 90vh;
+      /* Still responsive to viewport */
+      overflow: auto;
+      /* Adds scroll if content exceeds dimensions */
+    }
 
-.collage-img {
-  width: 100%;
-  height: 100%;
-  min-height: 0; /* Allows grid items to shrink */
-  object-fit: cover;
-  border-radius: 5px;
-  transition: all 0.3s;
-}
+    .collage-img {
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      /* Allows grid items to shrink */
+      object-fit: cover;
+      border-radius: 5px;
+      transition: all 0.3s;
+    }
   </style>
 </head>
 
 <body onclick="startShow()">
 
   <!-- 🎂 Dudu's Photo -->
-  <img class="photo" src="dudu.jpg" alt="Dudu's Photo"
-    title="Click anywhere to start the surprise!" onclick="showPhotoCollage()" />
+  <img class="photo" src="dudu.jpg" alt="Dudu's Photo" title="Click anywhere to start the surprise!"
+    onclick="showPhotoCollage()" />
 
   <!-- 🎉 Birthday Surprise -->
   <div id="surprise">🎉 Happy Birthday Dudu! 🎉</div>
@@ -1103,10 +1205,10 @@
       <img src="dudu3.jpg" class="collage-img" alt="Dudu 3">
       <img src="dudu4.jpg" class="collage-img" alt="Dudu 4">
       <img src="dudu5.jpg" class="collage-img" alt="Dudu 5">
-      <img src="dudu.jpg" class="collage-img" alt="Dudu 6">
-      <img src="dudu.jpg" class="collage-img" alt="Dudu 7">
-      <img src="dudu.jpg" class="collage-img" alt="Dudu 8">
-      <img src="dudu.jpg" class="collage-img" alt="Dudu 9">
+      <img src="dudu6.jpeg" class="collage-img" alt="Dudu 6">
+      <img src="dudu7.jpg" class="collage-img" alt="Dudu 7">
+      <img src="dudu8.jpeg" class="collage-img" alt="Dudu 8">
+      <img src="dudu9.jpg" class="collage-img" alt="Dudu 9">
     </div>
   </div>
 
@@ -1142,6 +1244,29 @@
   </audio>
 
   <script>
+
+    // Add touch event listeners alongside click events
+document.querySelector('.photo').addEventListener('touchend', showPhotoCollage);
+document.querySelector('.gift-box').addEventListener('touchend', openGift);
+document.querySelectorAll('.puzzle-piece').forEach(piece => {
+  piece.addEventListener('touchend', function(e) {
+    e.preventDefault();
+    const type = this.textContent;
+    if (type === '🧩') startMemoryGame();
+    if (type === '🎤') startKaraoke();
+    if (type === '🎠') showCarousel();
+    if (type === '🎆') launchFireworks();
+  });
+});
+
+// Prevent default touch behavior that might interfere
+document.addEventListener('touchmove', function(e) {
+  if (e.target.classList.contains('no')) {
+    e.preventDefault();
+  }
+}, { passive: false });
+
+
     const loveText = document.getElementById('loveText');
     const response = document.getElementById('response');
     const surprise = document.getElementById('surprise');
@@ -1281,27 +1406,74 @@
     }
 
 
-    function replyNo(e) {
-      e.stopPropagation();
-      const noMessages = [
-        "Are you sure? 😢",
-        "Maybe click again? 🥺",
-        "Pretty please? 💖",
-        "I'll keep asking! 😘",
-        "Just say yes! 🎉"
-      ];
-      const randomMessage = noMessages[Math.floor(Math.random() * noMessages.length)];
-      response.textContent = randomMessage;
+ function replyNo(e) {
+  // Prevent both mouse and touch events from bubbling
+  e.preventDefault();
+  e.stopPropagation();
+  
+  const noMessages = [
+    "Are you sure? 😢",
+    "Maybe click again? 🥺",
+    "Pretty please? 💖",
+    "I'll keep asking! 😘",
+    "Just say yes! 🎉",
+    "Try the other button! 😉",
+    "Don't break my heart! 💔",
+    "I made this just for you! 🥺",
+    "Please reconsider! 🙏",
+    "You're too cute to say no! 😍"
+  ];
+  
+  // Get random message
+  const randomMessage = noMessages[Math.floor(Math.random() * noMessages.length)];
+  response.textContent = randomMessage;
 
-      // Move the no button
-      const noBtn = e.target;
-      const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
-      const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
-      noBtn.style.position = 'absolute';
-      noBtn.style.left = x + 'px';
-      noBtn.style.top = y + 'px';
-    }
+  // Move the no button
+  const noBtn = e.target.closest('.no'); // More reliable target finding
+  if (!noBtn) return;
 
+  // Calculate safe movement area (with padding)
+  const padding = 20;
+  const maxX = window.innerWidth - noBtn.offsetWidth - padding;
+  const maxY = window.innerHeight - noBtn.offsetHeight - padding;
+  
+  // Ensure button stays within visible area
+  const x = Math.max(padding, Math.min(maxX, Math.random() * maxX));
+  const y = Math.max(padding, Math.min(maxY, Math.random() * maxY));
+
+  // Apply movement with smooth transition
+  noBtn.style.transition = 'all 0.3s ease-out';
+  noBtn.style.position = 'fixed'; // Better for mobile
+  noBtn.style.left = x + 'px';
+  noBtn.style.top = y + 'px';
+  noBtn.style.zIndex = '1000'; // Ensure it stays above other elements
+
+  // Remove transition after movement to prevent lag on next move
+  setTimeout(() => {
+    noBtn.style.transition = 'none';
+  }, 300);
+
+  // Add haptic feedback on mobile if available
+  if ('vibrate' in navigator) {
+    navigator.vibrate(50); // Short vibration
+  }
+
+  // Add visual feedback
+  noBtn.style.transform = 'scale(0.95)';
+  setTimeout(() => {
+    noBtn.style.transform = 'scale(1)';
+  }, 200);
+
+  // Make button slightly smaller on mobile to prevent accidental taps
+  if (window.innerWidth < 768) {
+    noBtn.style.fontSize = '14px';
+    noBtn.style.padding = '8px 16px';
+    setTimeout(() => {
+      noBtn.style.fontSize = '';
+      noBtn.style.padding = '';
+    }, 1000);
+  }
+}
     function createHearts() {
       if (heartsInterval) clearInterval(heartsInterval);
 
@@ -1381,7 +1553,7 @@
     }
 
     function setupMemoryGame() {
-      const emojis = ['🎂', '🎁', '🎉', '🎈', '💖', '🍰', '🥳', '✨'];
+      const emojis = ['I🎂', 'ƎVO⅃🎁', 'UOY🎉', 'YᗺAᗺ🎈'];
       const cards = [...emojis, ...emojis]; // Duplicate for pairs
 
       // Shuffle cards
@@ -1537,8 +1709,8 @@
     document.addEventListener('DOMContentLoaded', () => {
       // Preload images
       const images = [
-        'https://i.imgur.com/0y8Ftya.jpg',
-        'https://i.imgur.com/0y8Ftya.jpg',
+        'cute.jpg',
+        'dudu.jpeg',
         'https://i.imgur.com/0y8Ftya.jpg',
         'https://i.imgur.com/0y8Ftya.jpg',
         'https://i.imgur.com/0y8Ftya.jpg',
